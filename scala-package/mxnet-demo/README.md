@@ -6,10 +6,10 @@ User are required to use `mvn package` to build the package,
 ```Bash
 export SCALA_VERSION_PROFILE=2.11 SCALA_VERSION=2.11.8 MXNET_VERSION=1.2.0
 export SCALA_PKG_PROFILE=
-mvn package -Dmxnet.profile=$(SCALA_PKG_PROFILE) \
-		-Dmxnet.scalaprofile=$(SCALA_VERSION_PROFILE) \
-		-Dmxnet.version=$(MXNET_VERSION) \
-		-Dscala.version=$(SCALA_VERSION)
+mvn package -Dmxnet.profile=${SCALA_PKG_PROFILE} \
+		-Dmxnet.scalaprofile=${SCALA_VERSION_PROFILE} \
+		-Dmxnet.version=${MXNET_VERSION} \
+		-Dscala.version=${SCALA_VERSION}
 ```
 These environment variable (`SCALA_PKG_PROFILE`, `SCALA_VERSION_PROFILE`, `MXNET_VERSION`, `SCALA_VERSION`)
 should be set before executing the line above. 
